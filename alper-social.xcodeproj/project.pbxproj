@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E220C955CD00278C53 /* AppDelegate.swift */; };
-		4EB4C9E520C955CD00278C53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E420C955CD00278C53 /* ViewController.swift */; };
+		4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E420C955CD00278C53 /* SignInVC.swift */; };
 		4EB4C9E820C955CD00278C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E620C955CD00278C53 /* Main.storyboard */; };
 		4EB4C9EA20C955EB00278C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E920C955EB00278C53 /* Assets.xcassets */; };
 		4EB4C9ED20C955EB00278C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9EB20C955EB00278C53 /* LaunchScreen.storyboard */; };
+		4EB4C9F520C9567D00278C53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9F420C9567D00278C53 /* GoogleService-Info.plist */; };
+		9F9C9C9FE9A3939D528A1BB9 /* Pods_alper_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alper_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB4C9DF20C955CD00278C53 /* alper-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alper-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB4C9E220C955CD00278C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EB4C9E420C955CD00278C53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EB4C9E420C955CD00278C53 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4EB4C9E720C955CD00278C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EB4C9E920C955EB00278C53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB4C9EC20C955EB00278C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB4C9EE20C955EB00278C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB4C9F420C9567D00278C53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F8CD116C4E9C81A98FB251D /* Pods-alper-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.release.xcconfig"; sourceTree = "<group>"; };
+		A6DED336751EEA68BFE1DCDB /* Pods-alper-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9C9C9FE9A3939D528A1BB9 /* Pods_alper_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				4EB4C9E120C955CD00278C53 /* alper-social */,
 				4EB4C9E020C955CD00278C53 /* Products */,
+				CC423C9D13734B682B975E58 /* Pods */,
+				566F7F3BBD090546FD6DE779 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +63,64 @@
 		4EB4C9E120C955CD00278C53 /* alper-social */ = {
 			isa = PBXGroup;
 			children = (
-				4EB4C9E220C955CD00278C53 /* AppDelegate.swift */,
-				4EB4C9E420C955CD00278C53 /* ViewController.swift */,
+				4EB4C9F820C95A7A00278C53 /* Controller */,
+				4EB4C9F720C95A7500278C53 /* View */,
+				4EB4C9F620C95A6B00278C53 /* Model */,
+				4EB4C9F920C95A8200278C53 /* Supporting Files */,
 				4EB4C9E620C955CD00278C53 /* Main.storyboard */,
-				4EB4C9E920C955EB00278C53 /* Assets.xcassets */,
-				4EB4C9EB20C955EB00278C53 /* LaunchScreen.storyboard */,
 				4EB4C9EE20C955EB00278C53 /* Info.plist */,
+				4EB4C9F420C9567D00278C53 /* GoogleService-Info.plist */,
 			);
 			path = "alper-social";
+			sourceTree = "<group>";
+		};
+		4EB4C9F620C95A6B00278C53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EB4C9F720C95A7500278C53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EB4C9F820C95A7A00278C53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4C9E420C955CD00278C53 /* SignInVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4EB4C9F920C95A8200278C53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4C9E220C955CD00278C53 /* AppDelegate.swift */,
+				4EB4C9E920C955EB00278C53 /* Assets.xcassets */,
+				4EB4C9EB20C955EB00278C53 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		566F7F3BBD090546FD6DE779 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC423C9D13734B682B975E58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6DED336751EEA68BFE1DCDB /* Pods-alper-social.debug.xcconfig */,
+				7F8CD116C4E9C81A98FB251D /* Pods-alper-social.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB4C9F120C955EB00278C53 /* Build configuration list for PBXNativeTarget "alper-social" */;
 			buildPhases = (
+				8C10F3A087EE6DFC5ADB4B07 /* [CP] Check Pods Manifest.lock */,
 				4EB4C9DB20C955CD00278C53 /* Sources */,
 				4EB4C9DC20C955CD00278C53 /* Frameworks */,
 				4EB4C9DD20C955CD00278C53 /* Resources */,
+				34D53E74B67D9DE6BAA7B9D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB4C9ED20C955EB00278C53 /* LaunchScreen.storyboard in Resources */,
+				4EB4C9F520C9567D00278C53 /* GoogleService-Info.plist in Resources */,
 				4EB4C9EA20C955EB00278C53 /* Assets.xcassets in Resources */,
 				4EB4C9E820C955CD00278C53 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +192,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34D53E74B67D9DE6BAA7B9D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-alper-social/Pods-alper-social-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alper-social/Pods-alper-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C10F3A087EE6DFC5ADB4B07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alper-social-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EB4C9DB20C955CD00278C53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB4C9E520C955CD00278C53 /* ViewController.swift in Sources */,
+				4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */,
 				4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +385,7 @@
 		};
 		4EB4C9F220C955EB00278C53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6DED336751EEA68BFE1DCDB /* Pods-alper-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +404,7 @@
 		};
 		4EB4C9F320C955EB00278C53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8CD116C4E9C81A98FB251D /* Pods-alper-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
