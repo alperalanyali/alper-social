@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CC20CA8FDB001A8DAA /* CustomField.swift */; };
+		4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CE20CA91C3001A8DAA /* CustomButton.swift */; };
 		4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E220C955CD00278C53 /* AppDelegate.swift */; };
 		4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E420C955CD00278C53 /* SignInVC.swift */; };
 		4EB4C9E820C955CD00278C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E620C955CD00278C53 /* Main.storyboard */; };
 		4EB4C9EA20C955EB00278C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E920C955EB00278C53 /* Assets.xcassets */; };
 		4EB4C9ED20C955EB00278C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9EB20C955EB00278C53 /* LaunchScreen.storyboard */; };
 		4EB4C9F520C9567D00278C53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9F420C9567D00278C53 /* GoogleService-Info.plist */; };
+		4EB4C9FB20C9761E00278C53 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9FA20C9761E00278C53 /* CustomView.swift */; };
+		4EB4C9FD20C976FD00278C53 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9FC20C976FD00278C53 /* Constant.swift */; };
+		4EB4C9FF20C982E600278C53 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9FE20C982E500278C53 /* RoundBtn.swift */; };
 		9F9C9C9FE9A3939D528A1BB9 /* Pods_alper_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alper_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E4479CC20CA8FDB001A8DAA /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
+		4E4479CE20CA91C3001A8DAA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4EB4C9DF20C955CD00278C53 /* alper-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alper-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB4C9E220C955CD00278C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB4C9E420C955CD00278C53 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		4EB4C9EC20C955EB00278C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB4C9EE20C955EB00278C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB4C9F420C9567D00278C53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EB4C9FA20C9761E00278C53 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		4EB4C9FC20C976FD00278C53 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4EB4C9FE20C982E500278C53 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		7F8CD116C4E9C81A98FB251D /* Pods-alper-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.release.xcconfig"; sourceTree = "<group>"; };
 		A6DED336751EEA68BFE1DCDB /* Pods-alper-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +94,10 @@
 		4EB4C9F720C95A7500278C53 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4C9FA20C9761E00278C53 /* CustomView.swift */,
+				4EB4C9FE20C982E500278C53 /* RoundBtn.swift */,
+				4E4479CC20CA8FDB001A8DAA /* CustomField.swift */,
+				4E4479CE20CA91C3001A8DAA /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 				4EB4C9E220C955CD00278C53 /* AppDelegate.swift */,
 				4EB4C9E920C955EB00278C53 /* Assets.xcassets */,
 				4EB4C9EB20C955EB00278C53 /* LaunchScreen.storyboard */,
+				4EB4C9FC20C976FD00278C53 /* Constant.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +215,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-alper-social/Pods-alper-social-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -207,6 +225,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -242,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB4C9FB20C9761E00278C53 /* CustomView.swift in Sources */,
+				4EB4C9FF20C982E600278C53 /* RoundBtn.swift in Sources */,
 				4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */,
+				4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */,
+				4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */,
 				4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */,
+				4EB4C9FD20C976FD00278C53 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

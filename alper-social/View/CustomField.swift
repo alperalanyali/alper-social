@@ -10,12 +10,19 @@ import UIKit
 
 class CustomField: UITextField {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.borderColor = UIColor(red: shadowGray, green: shadowGray, blue: shadowGray, alpha: shadowAlpha).cgColor
+        layer.borderWidth = 2
+        layer.cornerRadius = shadowRadius
     }
-    */
 
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: boundX , dy: boundY)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+         return bounds.insetBy(dx: boundX , dy: boundY)
+    }
 }
