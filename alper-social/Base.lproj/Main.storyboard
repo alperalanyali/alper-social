@@ -236,11 +236,11 @@
                                     <constraint firstItem="GYQ-TW-XdZ" firstAttribute="leading" secondItem="VrR-Gl-PFs" secondAttribute="leading" constant="8" id="jDM-pi-78g"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
                                 <rect key="frame" x="16" y="166" width="343" height="501"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThePost" rowHeight="365" id="bdQ-E2-Ajo" customClass="PostCell" customModule="alper_social" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ThePost" rowHeight="365" id="bdQ-E2-Ajo" customClass="PostCell" customModule="alper_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="365"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdQ-E2-Ajo" id="td3-ba-48w">
@@ -253,7 +253,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-qO-KqO">
                                                             <rect key="frame" x="8" y="8" width="327" height="50"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alper" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-By-vYH">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alper" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-By-vYH" customClass="RoundImageView" customModule="alper_social" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="ei2-gJ-bE2"/>
@@ -279,7 +279,7 @@
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="utI-Sp-Ka2">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="utI-Sp-Ka2" customClass="CustomImageView">
                                                             <rect key="frame" x="8" y="66" width="327" height="130"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="130" id="Mqk-2f-fda"/>
@@ -339,6 +339,13 @@
                                                 <constraint firstItem="voC-Td-0rY" firstAttribute="leading" secondItem="td3-ba-48w" secondAttribute="leading" id="iuE-FI-Psr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="eph-cx-ltB" id="1c7-Aa-cPS"/>
+                                            <outlet property="likesLbl" destination="OPQ-kU-Shd" id="uPY-rG-nwD"/>
+                                            <outlet property="postImg" destination="utI-Sp-Ka2" id="saw-DW-XhY"/>
+                                            <outlet property="profileImg" destination="8JS-By-vYH" id="44L-QK-Jei"/>
+                                            <outlet property="userNameLbl" destination="tIg-JV-auW" id="z8G-Fv-YM4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

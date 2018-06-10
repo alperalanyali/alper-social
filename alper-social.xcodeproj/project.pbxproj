@@ -21,6 +21,7 @@
 		4EB4C9FF20C982E600278C53 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9FE20C982E500278C53 /* RoundBtn.swift */; };
 		4EE7A21A20CD8B4600B677DE /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A21920CD8B4600B677DE /* RoundImageView.swift */; };
 		4EE7A21E20CD98ED00B677DE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A21D20CD98ED00B677DE /* PostCell.swift */; };
+		4EE7A22020CDAD7A00B677DE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A21F20CDAD7A00B677DE /* CustomImageView.swift */; };
 		9F9C9C9FE9A3939D528A1BB9 /* Pods_alper_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		4EB4C9FE20C982E500278C53 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		4EE7A21920CD8B4600B677DE /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		4EE7A21D20CD98ED00B677DE /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4EE7A21F20CDAD7A00B677DE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7F8CD116C4E9C81A98FB251D /* Pods-alper-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.release.xcconfig"; sourceTree = "<group>"; };
 		A6DED336751EEA68BFE1DCDB /* Pods-alper-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alper-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alper-social/Pods-alper-social.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				4E4479CE20CA91C3001A8DAA /* CustomButton.swift */,
 				4EE7A21920CD8B4600B677DE /* RoundImageView.swift */,
 				4EE7A21D20CD98ED00B677DE /* PostCell.swift */,
+				4EE7A21F20CDAD7A00B677DE /* CustomImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				4E760FCA20CD40C8003EF248 /* FeedVC.swift in Sources */,
 				4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */,
 				4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */,
+				4EE7A22020CDAD7A00B677DE /* CustomImageView.swift in Sources */,
 				4EB4C9FD20C976FD00278C53 /* Constant.swift in Sources */,
 				4EE7A21A20CD8B4600B677DE /* RoundImageView.swift in Sources */,
 				4EE7A21E20CD98ED00B677DE /* PostCell.swift in Sources */,
