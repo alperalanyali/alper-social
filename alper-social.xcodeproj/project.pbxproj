@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CC20CA8FDB001A8DAA /* CustomField.swift */; };
 		4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CE20CA91C3001A8DAA /* CustomButton.swift */; };
+		4E760FCA20CD40C8003EF248 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E760FC920CD40C7003EF248 /* FeedVC.swift */; };
 		4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E220C955CD00278C53 /* AppDelegate.swift */; };
 		4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E420C955CD00278C53 /* SignInVC.swift */; };
 		4EB4C9E820C955CD00278C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4C9E620C955CD00278C53 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alper_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4479CC20CA8FDB001A8DAA /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		4E4479CE20CA91C3001A8DAA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4E760FC920CD40C7003EF248 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		4EB4C9DF20C955CD00278C53 /* alper-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alper-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB4C9E220C955CD00278C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB4C9E420C955CD00278C53 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB4C9E420C955CD00278C53 /* SignInVC.swift */,
+				4E760FC920CD40C7003EF248 /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -230,6 +234,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -267,6 +272,7 @@
 				4EB4C9FF20C982E600278C53 /* RoundBtn.swift in Sources */,
 				4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */,
 				4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */,
+				4E760FCA20CD40C8003EF248 /* FeedVC.swift in Sources */,
 				4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */,
 				4EB4C9E320C955CD00278C53 /* AppDelegate.swift in Sources */,
 				4EB4C9FD20C976FD00278C53 /* Constant.swift in Sources */,

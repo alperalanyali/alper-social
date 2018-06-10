@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController, UITextFieldDelegate {
 
@@ -20,9 +21,17 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         emailField.delegate = self
         pwdField.delegate = self
+      
     }
 
- 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = KeychainWrapper.standard.string(forKey: key_uid){
+            print("APO: ID found in Keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+        
+    }
     
     // MARK: Buttons' Action
     @IBAction func facebookBtnTapped(_ sender: Any) {
@@ -49,12 +58,14 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             Auth.auth().signIn(withEmail: email, password: pwd) { (user, error) in
                 if error == nil {
                     print("APO: Email User authenticated with Firebase :)")
+                    self.completeSignIn(id: (user?.user.uid)!)
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("APO: Unable to authenticate with Firebase using Email :(")
                         } else {
                             print("APO: Successfully authenticated with Firebase using Email :)")
+                            self.completeSignIn(id: (user?.user.uid)!)
                         }
                     })
                 }
@@ -63,13 +74,23 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     }
     
     func firebaseAuth(_ credential: AuthCredential) {
-        Auth.auth().signInAndRetrieveData(with: credential) { (resutl, error) in
+        Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
             if error != nil {
                 print("APO: Unable to authenticate with Firebase :(")
             } else {
                 print("APO: Successfully authenticated with Firebase :)")
+                if let user = user {
+                    self.completeSignIn(id: user.user.uid)
+                }
+                
             }
         }
+    }
+    
+    func completeSignIn(id: String){
+            let keychainResult = KeychainWrapper.standard.set(id, forKey: key_uid)
+            print("APO: Data saved to Keychain \(keychainResult)")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
     // MARK: TextField Function

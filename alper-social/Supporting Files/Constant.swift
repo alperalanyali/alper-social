@@ -19,3 +19,4 @@ let shadowOpacity: Float = 0.8
 let boundX: CGFloat = 10.0
 let boundY: CGFloat = 5.0
 
+let key_uid = "uid"
