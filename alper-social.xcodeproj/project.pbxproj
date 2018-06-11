@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E27787320CE82B400A3E9B9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27787220CE82B400A3E9B9 /* DataService.swift */; };
+		4E2C695D20CEC99A00F2329F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C695C20CEC99900F2329F /* Post.swift */; };
 		4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CC20CA8FDB001A8DAA /* CustomField.swift */; };
 		4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4479CE20CA91C3001A8DAA /* CustomButton.swift */; };
 		4E760FCA20CD40C8003EF248 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E760FC920CD40C7003EF248 /* FeedVC.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1E9B0CC964373D73D93AD148 /* Pods_alper_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alper_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E27787220CE82B400A3E9B9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4E2C695C20CEC99900F2329F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4E4479CC20CA8FDB001A8DAA /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		4E4479CE20CA91C3001A8DAA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4E760FC920CD40C7003EF248 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		4EB4C9F620C95A6B00278C53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E2C695C20CEC99900F2329F /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				4EB4C9FF20C982E600278C53 /* RoundBtn.swift in Sources */,
 				4EB4C9E520C955CD00278C53 /* SignInVC.swift in Sources */,
 				4E27787320CE82B400A3E9B9 /* DataService.swift in Sources */,
+				4E2C695D20CEC99A00F2329F /* Post.swift in Sources */,
 				4E4479CD20CA8FDB001A8DAA /* CustomField.swift in Sources */,
 				4E760FCA20CD40C8003EF248 /* FeedVC.swift in Sources */,
 				4E4479CF20CA91C3001A8DAA /* CustomButton.swift in Sources */,

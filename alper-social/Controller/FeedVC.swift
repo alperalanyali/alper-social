@@ -14,6 +14,9 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
 
     @IBOutlet weak var captionField: CustomField!
     @IBOutlet weak var tableView: UITableView!
+    
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +27,18 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         
         
         DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
-            print(snapshot.value!)
+//            print(snapshot.value!)
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    print("APO: SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableView.reloadData()
         }
     }
     
@@ -34,10 +48,14 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        
+        return posts.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+        print("APO: \(post.caption)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "ThePost") as! PostCell
         return cell
     }
