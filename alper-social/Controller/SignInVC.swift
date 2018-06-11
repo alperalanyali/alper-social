@@ -58,14 +58,22 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             Auth.auth().signIn(withEmail: email, password: pwd) { (user, error) in
                 if error == nil {
                     print("APO: Email User authenticated with Firebase :)")
-                    self.completeSignIn(id: (user?.user.uid)!)
+                    if let user = user {
+                        let userData = ["provider": user.user.providerID]
+                        self.completeSignIn(id: (user.user.uid), userData: userData )
+                    }
+                 
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("APO: Unable to authenticate with Firebase using Email :(")
                         } else {
                             print("APO: Successfully authenticated with Firebase using Email :)")
-                            self.completeSignIn(id: (user?.user.uid)!)
+                            if let user = user {
+                                let userData = ["provider": user.user.providerID]
+                                self.completeSignIn(id: (user.user.uid),userData: userData)
+                            }
+                            
                         }
                     })
                 }
@@ -80,14 +88,16 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             } else {
                 print("APO: Successfully authenticated with Firebase :)")
                 if let user = user {
-                    self.completeSignIn(id: user.user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.user.uid, userData: userData)
                 }
                 
             }
         }
     }
     
-    func completeSignIn(id: String){
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
+            DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
             let keychainResult = KeychainWrapper.standard.set(id, forKey: key_uid)
             print("APO: Data saved to Keychain \(keychainResult)")
             performSegue(withIdentifier: "goToFeed", sender: nil)
