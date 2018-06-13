@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Firebase
 class Post {
     
     // MARK: Data Encapsulation

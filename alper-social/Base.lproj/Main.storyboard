@@ -192,7 +192,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GYQ-TW-XdZ">
                                         <rect key="frame" x="8" y="4" width="327" height="65"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="5me-6r-xee" customClass="RoundImageView" customModule="alper_social" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="5me-6r-xee" customClass="RoundImageView" customModule="alper_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
@@ -221,6 +221,9 @@
                                                     <constraint firstAttribute="height" constant="65" id="sfq-aQ-5eF"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="083-A5-XsA" eventType="touchUpInside" id="d1T-gS-HaT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -236,15 +239,15 @@
                                     <constraint firstItem="GYQ-TW-XdZ" firstAttribute="leading" secondItem="VrR-Gl-PFs" secondAttribute="leading" constant="8" id="jDM-pi-78g"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
                                 <rect key="frame" x="16" y="166" width="343" height="501"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ThePost" rowHeight="365" id="bdQ-E2-Ajo" customClass="PostCell" customModule="alper_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="365"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdQ-E2-Ajo" id="td3-ba-48w">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="364.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="365"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voC-Td-0rY">
@@ -366,12 +369,17 @@
                         <viewLayoutGuide key="safeArea" id="RbY-xf-VIf"/>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="5me-6r-xee" id="fsF-ka-Irr"/>
                         <outlet property="captionField" destination="1Bc-rw-SpE" id="fQZ-pJ-vy8"/>
                         <outlet property="tableView" destination="y2C-a6-5Tg" id="t60-kA-eTy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgC-6f-EdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="NXt-xG-1mN"/>
+                <tapGestureRecognizer id="NXt-xG-1mN">
+                    <connections>
+                        <action selector="addImageTapped:" destination="083-A5-XsA" id="lGg-Xp-SgO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="732" y="40.929535232383813"/>
         </scene>

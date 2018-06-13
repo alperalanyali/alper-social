@@ -11,17 +11,24 @@ import Firebase
 
 let DB_BASE = Database.database().reference()
 
+let STORAGE_BASE = Storage.storage().reference()
 
 class DataService {
     
     static  let ds = DataService()
     
     
-    //MARK: Data Encapsulation
+    //MARK: Data Encapsulation of DB References
     
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
+    
+    //MARK: Data Encapsulation of Storage References
+    
+    private var _REF_STORAGE_IMAGES = STORAGE_BASE.child("post-pics")
+    
+    
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -33,6 +40,10 @@ class DataService {
     
     var REF_USERS: DatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_STORAGE_IMAGE: StorageReference {
+        return _REF_STORAGE_IMAGES
     }
     
     
