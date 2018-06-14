@@ -211,7 +211,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartQuotesType="yes"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-Dc-nLh" customClass="RoundBtn" customModule="alper_social" customModuleProvider="target">
                                                 <rect key="frame" x="262" y="0.0" width="65" height="65"/>
@@ -239,7 +239,7 @@
                                     <constraint firstItem="GYQ-TW-XdZ" firstAttribute="leading" secondItem="VrR-Gl-PFs" secondAttribute="leading" constant="8" id="jDM-pi-78g"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-a6-5Tg">
                                 <rect key="frame" x="16" y="166" width="343" height="501"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -247,7 +247,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="365"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdQ-E2-Ajo" id="td3-ba-48w">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="365"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="364.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voC-Td-0rY">
@@ -272,14 +272,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdH-Tx-fiF">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-zb-FTB">
                                                                     <rect key="frame" x="277" y="0.0" width="50" height="50"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="Pza-oE-KXb"/>
-                                                                        <constraint firstAttribute="width" constant="50" id="QiN-I3-N37"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="2GM-KS-DwW"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="MhD-8V-YwO"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="empty-heart"/>
-                                                                </button>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="utI-Sp-Ka2" customClass="CustomImageView">
@@ -344,6 +343,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="eph-cx-ltB" id="1c7-Aa-cPS"/>
+                                            <outlet property="likeImg" destination="yvl-zb-FTB" id="7VF-uo-XFq"/>
                                             <outlet property="likesLbl" destination="OPQ-kU-Shd" id="uPY-rG-nwD"/>
                                             <outlet property="postImg" destination="utI-Sp-Ka2" id="saw-DW-XhY"/>
                                             <outlet property="profileImg" destination="8JS-By-vYH" id="44L-QK-Jei"/>

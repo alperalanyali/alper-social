@@ -67,11 +67,12 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ThePost") as? PostCell {
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
+              
             } else {
                     cell.configureCell(post: post)
-                    return cell
+                
             }
+            return cell
         } else {
             return PostCell()
         }
@@ -116,20 +117,36 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
             let imgUid = NSUUID().uuidString
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
-            let key = DB_BASE.childByAutoId().key
         
+      
+        
+       
         DataService.ds.REF_STORAGE_IMAGE.child(imgUid).putData(data!, metadata: metadata) { (metadata, error) in
             if error != nil {
                 print("APO: Unable to upload image to Firebase Storage")
             } else {
                 print("APO: Successfully uploaded image to Firebase")
-
-
+                if let path = metadata?.path {
+                    let url = "\(self.storageRef)/\(path)"
+                    print("APO: URL: \(url)")
+                    self.updateView(imgURL: url)
+                }
+               
             }
         }
     }
     
-    func updateView() {
+    let storageRef = Storage.storage().reference(forURL: "gs://alper-social-f84f7.appspot.com")
+
+    func updateView(imgURL: String) {
+        let post : Dictionary<String, AnyObject> = [
+            "caption": self.captionField.text as AnyObject,
+            "imageUrl": imgURL as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
         captionField.text = ""
         imageSelected = false
         addImage.image = UIImage(named: "add-image")
