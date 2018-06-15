@@ -35,13 +35,17 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         
         DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
 //            print(snapshot.value!)
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                
                 for snap in snapshot {
                     print("APO: SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
+                  
+                        
                     }
                 }
             }
@@ -150,7 +154,7 @@ class FeedVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         captionField.text = ""
         imageSelected = false
         addImage.image = UIImage(named: "add-image")
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     @IBAction func signOutTapped(_ sender: UIButton) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: key_uid)
